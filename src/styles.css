@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.spinner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+html, body {
+  height: 100%;
+}
+
+html, body, a, h1, h2, p, span, label {
+  font-family: 'Lato', sans-serif;
+}
+
+p, span, label {
+  font-size: 16px;
+}
+
+va-compose-email .mat-tab-body, va-share-video .mat-tab-body {
+  padding: 20px;
+}
+
+/* a temporary fix for issue https://github.com/angular/material2/issues/4591 */
+.mat-tab-body-wrapper {
+  flex-grow: 1;
+}
+
+.mat-tab-body {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.mat-tab-body-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mat-tab-body {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.introjs-tooltipbuttons {
+  display: none !important;
+}
+
+.introjs-tooltip {
+  max-width: 600px !important;
+  min-width: 300px !important;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.alert .mat-simple-snackbar {
+  justify-content: center;
+}
+
+.iti-flag {
+  background-image: url("/assets/images/flags.png") !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .iti-flag {
+    background-image: url("/assets/images/flags.png") !important;
+  }
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.27);
+}
+
+.mat-tab-labels {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mat-tab-label {
+  font-size: 18px;
+  color: #81bfe9;
+  opacity: 1 !important;
+}
+
+.intro {
+  color: #81bfe9;
+  text-align: center;
+}
+
+.cdk-overlay-container {
+  z-index: 10000000;
+}

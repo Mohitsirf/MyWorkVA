@@ -1,0 +1,115 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$va-primary: (
+  50 : #e7e7e7,
+  100 : #c2c2c2,
+  200 : #999999,
+  300 : #707070,
+  400 : #525252,
+  500 : #333333,
+  600 : #2e2e2e,
+  700 : #272727,
+  800 : #202020,
+  900 : #141414,
+  A100 : #ef6e6e,
+  A200 : #ea4040,
+  A400 : #f60000,
+  A700 : #dd0000,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$va-accent: (
+  50 : #f0f7fc,
+  100 : #d9ecf8,
+  200 : #c0dff4,
+  300 : #a7d2f0,
+  400 : #94c9ec,
+  500 : #81bfe9,
+  600 : #79b9e6,
+  700 : #6eb1e3,
+  800 : #64a9df,
+  900 : #519bd9,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #d2eaff,
+  A700 : #b8deff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$va-palette-primary: mat-palette($va-primary);
+$va-palette-accent: mat-palette($va-accent);
+
+$va-app-theme: mat-light-theme($va-palette-primary, $va-palette-accent);
+@include angular-material-theme($va-app-theme);
+
+.bgAccent50 {
+  background: mat-color($va-palette-accent, 50);
+}
+
+.bgAccent500 {
+  background: mat-color($va-palette-accent, 500);
+}
+
+.bgPrimary50 {
+  background: mat-color($va-palette-primary, 50);
+}
+
+.bgPrimary100 {
+  background: mat-color($va-palette-primary, 100);
+}
+
+.borderAccent500 {
+  border-color: mat-color($va-palette-accent, 500);
+}
+
+@mixin linearGradient($top, $bottom) {
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
+}
+
+#dashboardContainer {
+  @include linearGradient(#000000, #404040);
+}
+
+.mat-card{
+  @include linearGradient(#ffffff, #f2f2f2);
+}
